@@ -1,0 +1,17 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AppTwoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AppTwoApplication.class, args);
+	}
+	
+	 @GetMapping("/service2")
+	    public String callService() {
+	        return "app 2 is up";
+	    }
+}

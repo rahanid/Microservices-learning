@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: zuul
+    
+server:
+  port: 8081
+  
+eureka:
+  client:
+    serviceUrl:
+            defaultzone: http://localhost:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+#  instance:
+#    preferIpAddress: true
+    
+zuul:
+  routes:
+    myapp:
+      path: /myapp/**
+      serviceId: my-app
+    apptwo:
+      path: /apptwo/**
+      serviceId: app-two
+    zipkin:
+      path: /Zipkin/**
+      serviceId: zipkin

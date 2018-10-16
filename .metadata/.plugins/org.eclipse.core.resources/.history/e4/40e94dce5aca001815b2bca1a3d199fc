@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: zipkin
+  zipkin:
+    baseUrl: http://localhost:8090/zipkin/
+  sleuth:
+    sampler:
+      percentage: 1.0
+    web:
+      skipPattern: (^cleanup.*)
+server:
+  port: 9001
+eureka:
+  client:
+    serviceUrl:
+            defaultzone: http://localhost:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+  instance:
+    preferIpAddress: true
+ 

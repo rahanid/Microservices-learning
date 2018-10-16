@@ -1,0 +1,30 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@SpringBootApplication
+public class AppTwoApplication {
+	
+	@Autowired
+	private EurekaClient eurekaClient;
+	  
+	@Autowired
+	private SpanMetricReporter spanMetricReporter;
+	  
+	@Autowired
+	private ZipkinProperties zipkinProperties;
+	  
+	@Value("${spring.sleuth.web.skipPattern}")
+	private String skipPattern;
+
+	public static void main(String[] args) {
+		SpringApplication.run(AppTwoApplication.class, args);
+	}
+	
+	 @GetMapping("/service2")
+	    public String callService() {
+	        return "app 2 is up";
+	    }
+}

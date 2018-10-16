@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="zuul-proxy"/>
+<aop-project name="my-app"/>
+<aop-project name="eureka-server"/>
+<aop-project name="app-two"/>
+<aop-project name="zipkin-server"/>
+</aop-reference-model>
