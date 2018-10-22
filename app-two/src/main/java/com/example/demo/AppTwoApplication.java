@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -40,13 +42,19 @@ public class AppTwoApplication {
 	
 	@Autowired
 	RestTemplate restTemplate;
+	
+	public static final Logger LOGGER = LoggerFactory.getLogger(AppTwoApplication.class);
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(AppTwoApplication.class, args);
 	}
 	
+	
+
 	 @GetMapping("/service2")
 	    public String callService() {
+		 LOGGER.info("app 2 is up");
 	        return "app 2 is up";
 	    }
 	 
