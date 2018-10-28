@@ -30,7 +30,7 @@ public class MyAppApplication {
 	
 	 @GetMapping("/check")
 	    public String greeting() {
-		 LOGGER.debug("my app is up");
+		 LOGGER.info("my app is up");
 	        return "my app is up";
 	    }
 	 
