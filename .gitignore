@@ -5,3 +5,6 @@ logs/*
 *.index
 *.snap
 
+*.gen
+*.container
+*.ini
