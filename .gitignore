@@ -11,3 +11,16 @@
 .app-two/logs/app-two/
 *.index
 *.snap
+.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.syncinfo.snap
+.metadata/.plugins/org.eclipse.core.resources/.projects/zuul-proxy/.markers.snap
+.metadata/.plugins/org.eclipse.core.resources/.projects/zuul-proxy/.syncinfo.snap
+.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap
+.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml
+.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/com.genuitec.eclipse.aeri.server1/server-config.json
+.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/server-config.json
+.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.jboss.tools/server-config.json
+.metadata/.plugins/org.eclipse.jdt.core/1573264569.index
+.metadata/.plugins/org.eclipse.jdt.core/71939880.index
+.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps
