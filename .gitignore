@@ -9,4 +9,3 @@ app-two/logs/app-two.log.2018-10-16_0.gz
 .sonarlint/
 app-two/logs/app-two/
 *.index
-*.index
