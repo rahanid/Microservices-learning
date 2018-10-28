@@ -45,13 +45,12 @@ public class AppTwoApplication {
 
 	 @GetMapping("/service2")
 	    public String callService() {
-		 LOGGER.debug("app 2 is up");
+		 LOGGER.info("app 2 is up");
 	        return "app 2 is up";
 	    }
 	 
 	 @GetMapping("/callapp1")
 	    public String callApp1() {
-		 LOGGER.debug("app 2 calls my app");
 		 LOGGER.info("app 2 calls my app");
 
 	        Application application = eurekaClient.getApplication("my-app");
