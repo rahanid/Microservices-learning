@@ -8,3 +8,6 @@ logs/*
 *.gen
 *.container
 *.ini
+*.frq
+*.frq
+*metadata/*
