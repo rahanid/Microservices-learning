@@ -1,4 +1,11 @@
 spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    
+ 
   application:
     name: app-two
   zipkin:
@@ -15,11 +22,12 @@ spring:
       skipPattern: (^cleanup.*)
 server:
   port: 9001
+#  servlet:
+#    context-path: 
 eureka:
   client:
     serviceUrl:
-            defaultzone: http://localhost:8761/eureka/
-    registerWithEureka: true
+      defaultzone: http://localhost:8761/eureka/
     fetchRegistry: true
   instance:
     preferIpAddress: true
@@ -29,5 +37,13 @@ logging:
       springframework:
         web: info
   file: logback.xml
-    
- 
+  
+hibernate:
+  datasource:
+    jdbc-url: jdbc:mysql://127.0.0.1:3306/microservices?zeroDateTimeBehavior=convertToNull&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useSSL=false
+    user: root
+    password:
+    driver-class: com.mysql.jdbc.Driver
+    max-idle-time: 6
+    min-pool-size: 3
+    max-pool-size: 15
