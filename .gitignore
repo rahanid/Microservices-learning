@@ -11,4 +11,5 @@ logs/*
 *.frq
 *.frq
 *metadata/*
+*metadata\*
 .metadata/.plugins/org.eclipse.core.resources/.history/1/c087d9fb28ca001814bcf5602106f03c
