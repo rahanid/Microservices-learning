@@ -16,8 +16,6 @@ import org.springframework.web.client.RestTemplate;
 
 public class MyAppApplication {
 	
-	/*@Autowired
-	private RestTemplate restTemplate;*/
 	
 	public static final Logger LOGGER = LoggerFactory.getLogger(MyAppApplication.class);
 
@@ -34,10 +32,7 @@ public class MyAppApplication {
 	        return "my app is up";
 	    }
 	 
-	/* @GetMapping("/callAnotherService")
-	    public String callService() {
-	        return "my app is up";
-	    }*/
+	
 	 
 	 
 	
