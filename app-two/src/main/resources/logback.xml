@@ -13,7 +13,7 @@
 		<append>true</append>
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>D:/6014671/Work\Microservices-learning/logs/app-two.log.%d{yyyy-MM-dd}_%i.gz
+			<fileNamePattern>D:/6014671/Work/Microservices-learning/logs/app-two.log.%d{yyyy-MM-dd}_%i.gz
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
