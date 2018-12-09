@@ -8,11 +8,11 @@ server:
 eureka:
   client:
     serviceUrl:
-            defaultzone: http://localhost:8760/eureka/
+      defaultZone: http://eureka-server:8761/eureka #container ip or container name in docker compose
     registerWithEureka: true
     fetchRegistry: true
-#  instance:
-#    preferIpAddress: true
+  instance:
+    preferIpAddress: true
     
 zuul:
   routes:
@@ -22,4 +22,9 @@ zuul:
     apptwo:
       path: /apptwo/**
       serviceId: app-two
-    
+logging:
+  level:
+    org:
+      springframework:
+        web: info
+  file: logback.xml
