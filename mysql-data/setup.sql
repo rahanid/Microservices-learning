@@ -19,10 +19,10 @@
 -- Table structure for table `employee`
 --
 
-DROP TABLE IF EXISTS `employee`;
+use microservices;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `employee` (
+CREATE TABLE if not exists `employee` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `department` varchar(45) DEFAULT NULL,
