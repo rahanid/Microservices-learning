@@ -3,66 +3,77 @@ services:
   db:
     image: mysql
     container_name: db
-    build: D:\6014671\Work\Microservices-learning\mysql
+    volumes:
+     - ./mysql-data:/docker-entrypoint-initdb.d
     environment:
        MYSQL_ROOT_PASSWORD: root
        MYSQL_DATABASE: microservices
-       MYSQL_USER: root
-       MYSQL_PASSWORD: root
     ports:
-     - "3307:3307"
+     - "3307:3306"
 
 
-#  eureka-server:
-#    container_name: eureka-server
-#    build: D:\6014671\Work\Microservices-learning\eureka-server\target
-#    ports:
-#     - "8761:8761"
-#  zipkin:
-#    image: zipkin
-#    container_name: zipkin
-#    build: D:\6014671\Work\Microservices-learning\zipkin - jar
-#    ports:
-#     - "9411:9411"
-#  zuul-proxy:
-#    image: zuul-proxy
-#    container_name: zuul-proxy
-#    build: D:\6014671\Work\Microservices-learning\zuul-proxy\target
-#    ports:
-#     - "8082:8082"
-#    links:
-#     - eureka-server
-#    depends_on:
-#     - eureka-server
-#  my-app:
-#    image: my-app
-#    container_name: my-app
-#    build: D:\6014671\Work\Microservices-learning\my-app\target
-#    ports:
-#     - "8090:8090"
-#    links:
-#     - eureka-server
-#     - zipkin
-#     - zuul-proxy  
-#    depends_on:
-#     - eureka-server
-#     - zipkin
-#     - zuul-proxy
-#  app-two:
-#    image: app-two
-#    container_name: app-two
-#    build: D:\6014671\Work\Microservices-learning\app-two\target
-#    ports:
-#     - "9001:9001"
-#    links:
-#     - eureka-server
-#     - zipkin
-#     - zuul-proxy  
-#     - db
-#    depends_on:
-#     - eureka-server
-#     - zipkin
-#     - zuul-proxy
-#     - db
+  eureka-server:
+    container_name: eureka-server
+    build: D:\6014671\Work\Microservices-learning\eureka-server\target
+    ports:
+     - "8761:8761"
+  
+  
+  
+  zipkin:
+    image: zipkin
+    container_name: zipkin
+    build: D:\6014671\Work\Microservices-learning\zipkin - jar
+    ports:
+     - "9411:9411"
+  
+  
+  
+  
+  zuul-proxy:
+    image: zuul-proxy
+    container_name: zuul-proxy
+    build: D:\6014671\Work\Microservices-learning\zuul-proxy\target
+    ports:
+     - "8082:8082"
+    links:
+     - eureka-server
+    depends_on:
+     - eureka-server
+  
+  
+  
+  my-app:
+    image: my-app
+    container_name: my-app
+    build: D:\6014671\Work\Microservices-learning\my-app\target
+    ports:
+     - "8090:8090"
+    links:
+     - eureka-server
+     - zipkin
+     - zuul-proxy  
+    depends_on:
+     - eureka-server
+     - zipkin
+     - zuul-proxy
+  
+  
+  app-two:
+    image: app-two
+    container_name: app-two
+    build: D:\6014671\Work\Microservices-learning\app-two\target
+    ports:
+     - "9001:9001"
+    links:
+     - eureka-server
+     - zipkin
+     - zuul-proxy  
+     - db
+    depends_on:
+     - eureka-server
+     - zipkin
+     - zuul-proxy
+     - db
 
   
