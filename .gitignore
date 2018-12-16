@@ -1,4 +1,7 @@
-
+.metadata/*
+.recommenders/*
+.solarlint/*
+logs/
 .metadata/.plugins/org.eclipse.m2e.core/nexus/38d31b1d40e5290c34d5391f1f9c74c4/_kd.cfs
 .metadata/.plugins/org.eclipse.m2e.core/nexus/38d31b1d40e5290c34d5391f1f9c74c4/_kc_1.del
 .metadata/.plugins/org.eclipse.m2e.core/nexus/38d31b1d40e5290c34d5391f1f9c74c4/_kc.cfs
